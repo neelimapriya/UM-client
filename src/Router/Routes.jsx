@@ -4,6 +4,7 @@ import Home from "../Components/Home/Home";
 import ErrorPage from "../Components/ErrrorPage/ErrorPage";
 import Register from "../Components/Register/Register";
 import Login from "../Components/Login/Login";
+import AddUser from "../Components/AddUser/AddUser";
 
 export const router = createBrowserRouter([
     {
@@ -22,7 +23,12 @@ export const router = createBrowserRouter([
         },
         {
           path:'/login',
-          element:<Login></Login>
+          element:<Login></Login>,
+
+        },
+        {
+          path:'/addUser',
+          element:<AddUser></AddUser>
         }
       ]
     },

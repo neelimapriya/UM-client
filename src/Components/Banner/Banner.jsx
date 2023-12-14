@@ -1,9 +1,8 @@
-import React from 'react';
-
+import banner from '../../assets/human-resources-concept-with-hand.jpg'
 const Banner = () => {
     return (
-        <div>
-            <h2>banner</h2>
+        <div className='flex items-center max-w-screen-xl mx-auto'>
+            <img src={banner} alt="" />
         </div>
     );
 };
