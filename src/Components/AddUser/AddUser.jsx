@@ -5,6 +5,13 @@ import useAxiosPublic from "../Hooks/UseAxiosPublic";
 const AddUser = () => {
 
     const axiosPublic =useAxiosPublic()
+    const today= new Date()
+    const f =new Intl.DateTimeFormat("en-us", {
+        dateStyle:"short",
+        timeStyle:"short"
+    })
+    const date= (f.format(today))
+    console.log(date)
     
 
   const handleAddUser = (e) => {
@@ -29,8 +36,10 @@ const AddUser = () => {
         name: name,
         email: email,
         phone: phone,
+        insertDate:date
       };
       axiosPublic.post("/addUser", userInfo).then((res) => {
+        console.log(res);
         console.log(res.data);
 
         if (res.data.insertedId) {
