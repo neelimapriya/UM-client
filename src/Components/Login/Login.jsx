@@ -32,13 +32,13 @@ const Login = () => {
   };
 
   return (
-    <div>
-      <div className="bg-gray-200 text-black h-72">
+    <div className="bg-gradient-to-r from-pink-300 to-blue-300">
+      <div className=" text-black h-72">
         <h2 className="pt-56 flex justify-center items-center text-4xl font-serif font-semibold">
           My Account
         </h2>
       </div>
-      <div className="hero min-h-screen  ">
+      <div className=" min-h-screen  ">
         <div className="hero-content ">
           <div className="card  w-full  shadow-2xl max-w-sm ">
             <form onSubmit={handleLogin} className="card-body text-black font-serif">
@@ -73,7 +73,7 @@ const Login = () => {
                 <input
                   type="submit"
                   value="Login"
-                  className="text-xl font-semibold bg-gradient-to-r from-pink-950 to-black text-white hover:from-green-700 hover:to-yellow-500 py-3 rounded-lg"
+                  className="text-xl font-semibold bg-gradient-to-r from-pink-700 to-blue-700 text-white hover:from-green-700 hover:to-yellow-500 py-3 rounded-lg"
                 />
               </div>
             </form>

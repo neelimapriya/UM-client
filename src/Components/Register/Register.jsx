@@ -103,14 +103,14 @@ const Register = () => {
   };
 
   return (
-    <div className="mb-20">
-      <div className="hero min-h-screen bg-gray-200 ">
+    <div className="pb-20 bg-gradient-to-r from-pink-300 to-blue-300">
+      <div className="hero min-h-screen  ">
         <div className=" max-w-xl flex-shrink-0 w-full">
           <h2 className="text-center font-serif text-3xl mt-32">
             {" "}
             Create Your account
           </h2>
-          <form onSubmit={handleRegister} className="card-body">
+          <form onSubmit={handleRegister} className="card-body w-4/5 mx-auto">
             <div className="form-control">
               <label className="label">
                 <span className="label-text font-serif text-xl">Name</span>
@@ -119,7 +119,7 @@ const Register = () => {
                 type="text"
                 name="name"
                 placeholder="Enter Your Name"
-                className=" w-full p-2 border focus border-black"
+                className="rounded-lg w-full p-2 border focus border-black"
                 required
               />
             </div>
@@ -132,7 +132,7 @@ const Register = () => {
                 type="email"
                 name="email"
                 placeholder=" Email Address*"
-                className=" w-full p-2 border focus border-black"
+                className="rounded-lg w-full p-2 border focus border-black"
                 required
               />
             </div>
@@ -146,7 +146,7 @@ const Register = () => {
                 type="number"
                 name="phone"
                 placeholder="your contact number"
-                className=" w-full p-2 border focus border-black"
+                className="rounded-lg w-full p-2 border focus border-black"
               />
             </div>
             {/* Gender */}
@@ -154,7 +154,7 @@ const Register = () => {
               Select gender.
             </h2>
 
-            <div className="flex gap-5 justify-center bg-slate-200">
+            <div className="flex flex-col md:flex-row md:gap-5 justify-center rounded-lg bg-slate-200">
               <div className="form-control">
                 <label className="label cursor-pointer">
                   <span className="label-text mr-2">Male</span>
@@ -199,7 +199,7 @@ const Register = () => {
             <h2 className="mt-3 flex justify-center text-xl ">
               How did you hear about this?
             </h2>
-            <div className="flex gap-5 justify-center bg-slate-200">
+            <div className="flex flex-col md:flex-row md:gap-5 justify-center rounded-lg bg-slate-200">
               <div className="form-control">
                 <label className="label cursor-pointer">
                   <span className="label-text mr-2">LinkedIn</span>
@@ -255,7 +255,7 @@ const Register = () => {
             </div>
 
             {/* city */}
-            <div className="text-xl font-serif flex justify-center mt-3">
+            <div className="text-xl font-serif flex justify-center rounded-lg mt-3">
               <label>
                 Select City:
                 <select className="ml-3" value={selectedCity} onChange={handleCityChange} required>
@@ -276,7 +276,7 @@ const Register = () => {
                 type="password"
                 name="password"
                 placeholder="Password"
-                className="p-2 border border-black"
+                className="p-2 rounded-lg border border-black"
                 required
               />
             </div>
@@ -287,20 +287,15 @@ const Register = () => {
             </div>
           </form>
 
-          <div className="text-center mb-5">
-            <p className="text-md  font-serif">
+          <div className="text-center mb-5 ">
+            <p className="text-md text-center  font-serif flex flex-col md:flex-row justify-center items-center">
               Already Have an Account ?
               <Link className="underline ml-2 text-blue-700 " to="/login">
                 Please Login
               </Link>
             </p>
           </div>
-          {/*   
-              <div>
-                {errorText && (
-                  <p className="text-center text-xl text-red-600">{errorText}</p>
-                )}
-              </div> */}
+         
         </div>
       </div>
     </div>
